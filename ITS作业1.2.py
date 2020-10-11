@@ -15,5 +15,4 @@ if __name__ == "__main__":
     print(flitered)
     flownum =  [int(x) for x in flitered['FLOW']]
     plt.plot(flitered['FTIME'],flownum)
-    ax=plt.gca()
     plt.show()
