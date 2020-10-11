@@ -15,7 +15,7 @@ if __name__ == "__main__":
     for index,row in a.iterrows():
         circuitaverinfo.loc[row['DETECTOR_NUMBER'],'FLOWNUM']=circuitaverinfo.loc[row['DETECTOR_NUMBER'],'FLOWNUM']+1
         circuitaverinfo.loc[row['DETECTOR_NUMBER'],'OCCUPYTIME']=circuitaverinfo.loc[row['DETECTOR_NUMBER'],'OCCUPYTIME']+row['OCC_TIME']
-        circuitaverinfo.loc[row['DETECTOR_NUMBER'],'SUMSPEED']=circuitaverinfo.loc[row['DETECTOR_NUMBER'],'SUMSPEED']+float(car_length/(row['OCC_TIME']/1000))
+        circuitaverinfo.loc[row['DETECTOR_NUMBER'],'SUMSPEED']=circuitaverinfo.loc[row['DETECTOR_NUMBER'],'SUMSPEED']+float((car_length+circuit_length)/(row['OCC_TIME']/1000))
     OCTIMERATE=[]
     AVESPEED=[]
     for index,row in circuitaverinfo.iterrows():
